@@ -151,7 +151,7 @@ TEST_F(MemoryPoolTest, clear_all) {
 
         memory_pool_.clear();
         EXPECT_EQ(memory_pool_.free(), kPoolSize);
-        EXPECT_EQ(memory_pool_.free_total, kPoolSize);
+        EXPECT_EQ(memory_pool_.free_total(), kPoolSize);
 }
 
 TEST_F(MemoryPoolTest, consolidate_free_memory) {
